@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+from flask_mail import Mail
 from datetime import datetime
 import json
 
@@ -9,6 +10,16 @@ with open("templates/config.json", 'r') as c:
 
 local_server = True
 app = Flask(__name__)
+app.config.update(
+    MAIL_SERVER = 'smtp.gmail.com',
+    MAIL_PORT = '465',
+    MAIL_USE_SSL = True,
+    MAIL_USERNAME = params['username'],
+    MAIL_PASSWORD = params['password']
+)
+
+mail = Mail(app)
+
 if local_server:
     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
 else:
@@ -43,8 +54,13 @@ def contact():
         entry = Contacts(name=name, phone_num=phone, mes=message, date=datetime.now(), email=email)
         db.session.add(entry)
         db.session.commit()
+        mail.send_message('New Message from '+name, 
+                            sender=email, 
+                            recipients = [params['username']],
+                            body = message + "\n\n\n Phone number : " + phone
+                            )
 
-    return render_template("contact.html")
+    return render_template("contact.html", params=params)
 
 
 app.run()
