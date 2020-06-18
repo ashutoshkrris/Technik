@@ -1,0 +1,12 @@
+{
+    "params":
+                {
+                    "local_server" : "True",
+                    "local_uri" : "mysql://root:@localhost/technik",
+                    "production_uri" : "mysql://root:@localhost/technik",
+                    "fb_url" : "https://facebook.com/ashutoshkrris",
+                    "git_url" : "https://github.com/ashutoshkrris/Technik",
+                    "twit_url" : "https://twitter.com/ashutoshkrris",
+                    "blog_name" : "Technik"
+                }
+}
