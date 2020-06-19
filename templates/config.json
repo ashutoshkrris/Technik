@@ -11,8 +11,8 @@
                     "username" : "your_email_here",
                     "password" : "your_pwd_here",
                     "no_of_posts" : 2,
-                    "admin_user" : "ashutoshkrris",
-                    "admin_pwd" : "devilishere",
+                    "admin_user" : "admin",
+                    "admin_pwd" : "admin",
                     "upload_location" : "D:\\Quarantine\\Flask\\static\\img\\uploaded"
                     
                 }
