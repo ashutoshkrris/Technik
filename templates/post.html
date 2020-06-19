@@ -2,18 +2,18 @@
 {% block body %}
 
   <!-- Page Header -->
-  {% set fname = 'img/' + posts.img_file %}
+  {% set fname = 'img/' + post.img_file %}
   <header class="masthead" style="background-image: url('{{ url_for('static',filename=fname)}}')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>{{posts.title}}</h1>
-            <h2 class="subheading">{{posts.subhead}}</h2>
+            <h1>{{post.title}}</h1>
+            <h2 class="subheading">{{post.subhead}}</h2>
             <span class="meta">Posted by
               <a href="#">Admin</a>
-              on {{posts.date}}</span>
+              on {{post.date}}</span>
           </div>
         </div>
       </div>
@@ -25,8 +25,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          {{posts.content}}
+          {{post.content}}
         </div>
+        <script src="{{post.url}}"></script>
       </div>
     </div>
   </article>

@@ -9,6 +9,11 @@
                     "twit_url" : "https://twitter.com/ashutoshkrris",
                     "blog_name" : "Technik",
                     "username" : "your_email_here",
-                    "password" : "your_pwd_here"
+                    "password" : "your_pwd_here",
+                    "no_of_posts" : 2,
+                    "admin_user" : "ashutoshkrris",
+                    "admin_pwd" : "devilishere",
+                    "upload_location" : "D:\\Quarantine\\Flask\\static\\img\\uploaded"
+                    
                 }
 }
