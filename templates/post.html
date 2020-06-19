@@ -2,7 +2,7 @@
 {% block body %}
 
   <!-- Page Header -->
-  {% set fname = 'img/' + post.img_file %}
+  {% set fname = 'img/uploaded/' + post.img_file %}
   <header class="masthead" style="background-image: url('{{ url_for('static',filename=fname)}}')">
     <div class="overlay"></div>
     <div class="container">
@@ -12,7 +12,7 @@
             <h1>{{post.title}}</h1>
             <h2 class="subheading">{{post.subhead}}</h2>
             <span class="meta">Posted by
-              <a href="#">Admin</a>
+              <a href="#">Ashutosh Krishna</a>
               on {{post.date}}</span>
           </div>
         </div>
