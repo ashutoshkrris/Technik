@@ -28,7 +28,8 @@ mail = Mail(app)
 if local_server:
     app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
 else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = params['production_uri']
+    SQLALCHEMY_DATABASE_URI = params['production_uri']
+    
 db = SQLAlchemy(app)
 
 class Contacts(db.Model):
