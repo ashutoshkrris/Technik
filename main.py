@@ -7,7 +7,7 @@ import os
 import math
 from werkzeug.utils import secure_filename
 
-with open("templates/config.json", 'r') as c:
+with open("config.json", 'r') as c:
     params = json.load(c)['params']
 
 
