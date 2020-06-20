@@ -8,11 +8,11 @@
                     "git_url" : "https://github.com/ashutoshkrris/Technik",
                     "twit_url" : "https://twitter.com/ashutoshkrris",
                     "blog_name" : "Technik",
-                    "username" : "ashutosh.devil7@gmail.com",
-                    "password" : "devilishere123",
+                    "username" : "gmail_id",
+                    "password" : "gmail_password",
                     "no_of_posts" : 2,
                     "admin_user" : "admin",
-                    "admin_pwd" : "admin",
+                    "admin_pwd" : "password",
                     "upload_location" : "D:\\Quarantine\\Flask\\static\\img\\uploaded"
                     
                 }
